@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumGame</title>
+    <link rel="stylesheet" href="numgame.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    
+</head>
+<body onload="loadGame" <!-- do something onload -->
+    <h1><center>Card Game</center></h1>
+    <!-- more elements here! -->
+    <center><label>Pick a card:</label><button id="draw" onclick="loadCard()">Draw</button></center>
+    <br>
+
+    <p id="report">Your hand:</p>
+    <br><br>
+    <p id="dealer">Dealer's hand:</p>
+
+    <script src="numgame.js"></script>
+</body>
+</html>

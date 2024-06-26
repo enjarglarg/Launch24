@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(40,40,40);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 207, 149)
+}
+#guess {
+    background-color: rgb(255, 228, 196);
+    font-family: 'Courier New', Courier, monospace;
+}
+#MAXNUM {
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+}
+#report {
+    background-color: rgba(0, 0, 0, 0.404);
+    color: rgb(255, 187, 60);
+}
+#guessButton {
+    background-color: rgb(255, 207, 149);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#maxPicker {
+    background-color:  rgb(255, 207, 149);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
