@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumGame</title>
+    <link rel="stylesheet" href="numgame.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body onload="loadGame()" <!-- do something onload -->
+    <h1>Number Guessing Game</h1>
+    <p>Rules:<br>These are the rules:<br><ul><li>The minimum numbe is 1</li><li>The maximum number is <input id="MAXNUM" type="number" min="1">
+        <button id="maxPicker"onclick="loadGame()">Pick</button> </li><li>No decimals</li><li>The game resets after you win</li><li>You can start after setting a maximum</li></ul></p>
+    <!-- more elements here! -->
+    <label>Your bet:</label> 
+    <input id="guess" type="number" min="1">
+    <button id="guessButton" onclick="makeGuess()">Gamble</button>
+
+    <br>
+
+    <p id="report">Report:</p>
+
+    <script src="numgame.js"></script>
+</body>
+</html>
