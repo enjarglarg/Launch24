@@ -30,8 +30,8 @@ function resetGame() {
 }
 
 function resetPaddles() {
-    paddleL = new Paddle(0, 0, paddleLength, paddleWidth, "red");
-    paddleR = new Paddle(boardWidth-paddleWidth, 0, paddleLength, paddleWidth, "blue");
+    paddleL = new Paddle(0, 0, paddleLength, paddleWidth, "rgb(238, 175, 82)");
+    paddleR = new Paddle(boardWidth-paddleWidth, 0, paddleLength, paddleWidth, "rgb(75, 154, 224)");
 }
 
 function resetBall() {
@@ -41,14 +41,22 @@ function resetBall() {
     direction = direction + 1;
     direction = Math.floor(direction)
     if (direction == 1)
-        ballSpeed = -5
+        ballSpeed = -7
     else if (direction == 2)
-        ballSpeed = 5
-    ball = new Ball(boardWidth/2, boardHeight/2, ballSpeed, -6, ballRadius, "teal" )
+        ballSpeed = 7
+    directionY= Math.random();
+    directionY = directionY * range;
+    directionY = directionY + 1;
+    directionY = Math.floor(directionY)
+    if (directionY == 1)
+        ballSpeedY = -7
+    else if (directionY == 2)
+        ballSpeedY = 7
+    ball = new Ball(boardWidth/2, boardHeight/2, ballSpeed, ballSpeedY, ballRadius, "rgb(40,40,40)" )
 }
 
 function clearBoard() {
-    ctx.fillStyle = "grey";
+    ctx.fillStyle = "rgb(255, 228, 196)";
     ctx.fillRect(0, 0, boardWidth, boardHeight);
 }
 
@@ -95,6 +103,26 @@ function score(player) {
 
 }
 function afterWaiting() {       
+
+    if (scoreL == 5) {
+        scoreboard.innerHTML = `ORANGE WINS!`
+        resetBall();
+        setTimeout(() => {
+            resetGame();
+        }, 5000);
+        ball.vx = 0
+        ball.vy = 0 
+    }
+    else if (scoreR == 5) {
+        scoreboard.innerHTML = `BLUE WINS!`
+        resetBall();
+        setTimeout(() => {
+            resetGame();
+        }, 5000);
+        ball.vx = 0
+        ball.vy = 0 
+        
+    }
     resetBall();
 
 }
