@@ -39,7 +39,8 @@ class Ball {
 
     bouncePaddleL(paddle) {
         if (this.x - this.r > paddle.w + paddle.x) return false;
-        if (this.x - this.r < paddle.x) return true; // Stop the Game
+        if (this.x - this.r < paddle.x) return true;
+        // Stop the Game
         if (this.y < paddle.y) return false;
         if (this.y > paddle.y + paddle.l) return false;
         if (this.vx < 0) {
