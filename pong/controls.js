@@ -9,7 +9,7 @@ let paddleVelocity = 10;
 
 function keyDown(event) {
     const key = event.keyCode;
-    console.log(`KEYDOWN: ${key}`)
+    //console.log(`KEYDOWN: ${key}`)
     switch (key) {
         case (UPARROW):
             paddleR.vy = -paddleVelocity;
@@ -24,16 +24,24 @@ function keyDown(event) {
             paddleL.vy = paddleVelocity;
             break;
         case (DKEY):
+            yVelocity= Math.random();
+            let range = 6;
+            yVelocity = yVelocity * range;
+            yVelocity = yVelocity - 3;
             if (ball.x < 100) {
                 ball.vx -= 1;
-                ball.vy += 1.5;
+                ball.vy += yVelocity;
                 console.log('deflect')
             }
             break;
         case (LEFTARROW):
+            yVelocity= Math.random();
+            let rrange = 6;
+            yVelocity = yVelocity * rrange;
+            yVelocity = yVelocity - 3;
             if (ball.x > boardWidth-100) {
                 ball.vx += 1;
-                ball.vy += 1.5;
+                ball.vy += yVelocity;
                 console.log('deflect')
             }
         default:
