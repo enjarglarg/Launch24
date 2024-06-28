@@ -6,7 +6,7 @@ let boardWidth = 900;
 let boardHeight = 500;
 let paddleSpin = 1.5; // >= 0.0
 let paddleForce = 1.1; // >= 1.0
-let paddleWidth = 15;
+let paddleWidth = 30;
 let paddleLength = 80;
 let ballRadius = 10;
 

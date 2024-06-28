@@ -26,12 +26,14 @@ function keyDown(event) {
         case (DKEY):
             if (ball.x < 100) {
                 ball.vx -= 1;
+                ball.vy += 1.5;
                 console.log('deflect')
             }
             break;
         case (LEFTARROW):
             if (ball.x > boardWidth-100) {
                 ball.vx += 1;
+                ball.vy += 1.5;
                 console.log('deflect')
             }
         default:
