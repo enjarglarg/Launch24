@@ -24,12 +24,13 @@ class Paddle {
     }
 
     moveCPU(ball) {
-        if (ball.vy > 0)
-            paddleR.vy = 5.5
-        else if (ball.vy < 0)
-            paddleR.vy = -5.5
+        if (ball.y - 40 > paddleR.y)
+            paddleR.vy = 10
+        else if (ball.y - 40 < paddleR.y)
+            paddleR.vy = -10
         else 
-        paddleR.vy = 0       // Use the properties of the ball to set a new velocity
+        paddleR.vy = 0
+        // Use the properties of the ball to set a new velocity
         // Helpful pieces:
         //   Math.min() and Math.max() to limit the velocity
         //   ball.y to see where the ball is

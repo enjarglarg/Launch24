@@ -7,7 +7,7 @@
     <title>pongleroni</title>
     <link rel="stylesheet" href="pong.css">
   </head>
-  <body> <head><center><img src="pong%20logo.png" alt="pong logo" title="pong logo" style="width: 438px; height: 121px;"></center></head>
+  <body> <img src="pong%20logo.png" alt="pong logo" title="pong logo">
     <canvas id="gameboard" width="500" height="500"></canvas>
     <div id="scoreboard">0 : 0</div>
     <button id="reset" onclick="resetGame()">RESET</button> <br>
